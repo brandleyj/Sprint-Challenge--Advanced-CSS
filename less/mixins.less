@@ -1,1 +1,28 @@
 // Mixins Here
+.styling(@color:@ebony-clay, @bgcolor:#f4f4f4) {
+	color: @color;
+	background: @bgcolor;
+	padding: 20px 0;
+	border: 1px double #e0e0e0;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.button() {
+	background: @btn-bg-color;
+	color: @sea-shell;
+	border-radius: 5px;
+	border: none;
+	padding: 0.5vh 1vw;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 2rem;
+	&:hover {
+		background: @sea-shell;
+		color: @btn-bg-color;
+	}
+	@media @mobile {
+		width: 100%;
+		padding: 2vh 0;
+	}
+}
